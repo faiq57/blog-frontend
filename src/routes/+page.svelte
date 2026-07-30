@@ -7,16 +7,30 @@
 <div class="max-w-2xl bg-[#fa89df] flex-1">
     <MainBanner />
     {#each data.articles as article}
-        <div class="mx-2 text-[#ffffff]">
+        <div class="mx-2 text-[#9f0f33]">
             <h1 class="font-bold text-2xl text-center mb-1">
                 {article.title}
             </h1>
             <div class="flex">
-                <div>By {article.author}</div>
-                <div class="ml-auto">{(new Date(article.timestamp + "Z")).toLocaleString()}</div>
+                <div class="font-bold">By {article.author}</div>
+                <div class="font-bold ml-auto">{(new Date(article.timestamp + "Z")).toLocaleString()}</div>
             </div>
             <div class="article-content mb-8 mt-2 text-justify">
                 {@html article.content}
+                <div class="bg-[#ffaaff] p-2 text-[#a01020]">
+                    Comments 
+                    {#each article.comments as comment}
+                        <div class="bg-[#ffccff] my-1 p-2 flex flex-col">
+                            <div class="font-bold flex">
+                                <div>{comment.author}</div>
+                                <div class="ml-auto">
+                                    {(new Date(comment.timestamp + "Z")).toLocaleString()}
+                                </div>
+                            </div>
+                            {comment.content} 
+                        </div>
+                    {/each}
+                </div>
             </div>
         </div>
     {/each}
@@ -25,5 +39,17 @@
 <style>
     .article-content :global(p) {
         margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .article-content :global(img) {
+        margin-inline: auto;
+    }
+    
+    .article-content :global(.vertical-image) {
+        max-height: 500px;
+        max-width: 70dvw;
+        height: auto;
+        width: auto;
     }
 </style>
