@@ -1,4 +1,4 @@
-export const load = async () => {
+export const load = async ({ fetch }) => {
     const request = new Request("https://blog-data.phaeiq.com/posts", {
         method: "GET",
     });
