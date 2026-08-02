@@ -112,6 +112,8 @@
     }
 
     .article-content :global(img) {
+        max-width: 100%;
+        height: auto;
         margin-inline: auto;
     }
     

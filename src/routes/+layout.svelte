@@ -17,14 +17,13 @@
 
 <style>
     main::before{
-        content: ""; 
+        content: "";
         position: fixed;
+        inset: 0;
         z-index: -1;
-        width: 100dvw;
-        height: 100dvh;  
-        background-image: var(--bg-url), var(--bg-url); 
+        background-image: var(--bg-url), var(--bg-url);
         background-position: 0 0, 100px 100px;
-        background-size: 200px, 200px; 
+        background-size: 200px, 200px;
         background-color: pink;
         filter: brightness(2);
     }
