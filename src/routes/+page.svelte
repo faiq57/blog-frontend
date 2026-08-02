@@ -79,7 +79,7 @@
                                 autocomplete="off"
                                 bind:value={commentBoxes[article.id].author}
                                 id={article.id + "-comment-author"}
-                                class="bg-amber-200 p-2"
+                                class="bg-amber-200 p-2 max-w-[20dvw]"
                                 placeholder="Name"/>
                             <button 
                                 class="px-2 ml-auto cursor-pointer bg-[#ffccff] rounded-2xl"
