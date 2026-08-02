@@ -49,7 +49,7 @@
     }
 </script>
 
-<div class="max-w-2xl bg-[#fa89df] flex-1">
+<div class="max-w-2xl w-full bg-[#fa89df] flex-1">
     <MainBanner />
     {#each data.articles as article}
         <div class="mx-2 text-[#9f0f33]">
