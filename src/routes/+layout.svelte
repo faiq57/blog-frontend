@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head><link rel="icon" href={cafGum} /></svelte:head>
-<div class="min-h-screen flex flex-col overflox-x-hidden">
+<div class="min-h-screen flex flex-col overflow-x-hidden">
     <nav class="bg-[#fa70fa] text-[#fffffa]">Work in progress navbar</nav>
 
     <main class="flex flex-1 flex-col items-center" style="--bg-url: url('{bgImage}')">
