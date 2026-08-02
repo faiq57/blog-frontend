@@ -1,12 +1,12 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
-    import bgImage from '$lib/assets/caf_gum.png';
+	import cafGum from '$lib/assets/caf_gum.png';
+    import bgImage from '$lib/assets/caf_gum_rotated.png';
 
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head><link rel="icon" href={cafGum} /></svelte:head>
 <div class="min-h-screen flex flex-col overflox-x-hidden">
     <nav class="bg-[#fa70fa] text-[#fffffa]">Work in progress navbar</nav>
 
@@ -20,12 +20,12 @@
         content: ""; 
         position: fixed;
         z-index: -1;
-        top: -250dvh;  
-        width: 500dvw;
-        height: 500dvh;  
-        background-image: var(--bg-url);
+        width: 100dvw;
+        height: 100dvh;  
+        background-image: var(--bg-url), var(--bg-url); 
+        background-position: 0 0, 100px 100px;
+        background-size: 200px, 200px; 
         background-color: pink;
-        transform: rotate(45deg);
         filter: brightness(2);
-    }  
+    }
 </style>
